@@ -1,0 +1,58 @@
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">FanZone</a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+    <div clas="pull-left">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/login">Sign-in</a></li>
+        <li *ngIf="af.isAuth"><a routerLink="/about">Dashboard</a></li>
+        <li *ngIf="af.isAuth"><a routerLink="/login" (click)="af.logout()">Logout</a></li>
+        <img *ngIf="photoURL" src="{{ af.photoURL }}" alt="">
+        <li *ngIf="af.isAuth">{{ af.displayName }}</li>
+
+      </ul>
+
+
+    </div>
+
+    <div class="pull-center">
+          <div class="input-group-btn">
+            <ul class="nav navbar-nav">
+              
+            </ul>
+              <!--<button type="submit" class="btn btn-default" routerLink="/login">Sign-in</button>-->
+          </div>
+    </div>
+
+
+
+
+    <div class="pull-right">
+
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="q" id="search-box">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+
+        </div>
+        </form>
+
+        
+    </div>
+    <!--here should insert angular forms -->
+  </div><!-- /.navbar-collapse -->
+</nav>
