@@ -1,3 +1,11 @@
+# Installation
+
+This project runs with angular-cli.
+1) git clone..
+2)npm install..
+3)ng serve.. and ready to go!
+
+
 # FirebaseAuthAngular2
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
