@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthMethods, AuthProviders } from 'angularfire2';
 import { Router } from '@angular/router';
-import { AuthService } from './services/auth.service';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'app-root',
@@ -9,13 +11,20 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
+  
+  users: Observable<any[]>;
 
   constructor(
-  private af: AuthService,
+  private af: AngularFire,
   private router: Router){
   }
 
 
-
-  
+  ngOnInit() {
+    this.users = this.af.database.list('/users')
+      .map(users => {
+        console.log("BEFORE MAP", users);
+        return users;
+    });
+  }
 }

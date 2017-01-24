@@ -9,7 +9,7 @@ export class AuthService{
   photoURL;
   authState;
   isAuth = false;
-  returnUrl: string;
+
 
   constructor(
     private af: AngularFire,
@@ -17,16 +17,15 @@ export class AuthService{
       
       
       this.af.auth.subscribe(authState => {
-      if(!authState){
-        this.displayName = null;
-        this.photoURL = null;
-        
-        return;
-      }
-      this.displayName = authState.auth.displayName;
-      this.photoURL = authState.auth.photoURL;
-    });
-  }
+        if(!authState){
+          this.displayName = null;
+          this.photoURL = null;
+        } else {
+          this.displayName = authState.auth.displayName;
+          this.photoURL = authState.auth.photoURL;
+        }
+      });
+    }
 
 
   login(from: string){
