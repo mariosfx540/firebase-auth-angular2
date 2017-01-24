@@ -14,6 +14,7 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './services/auth.guard';
 import { PublicComponent } from './home/public.component';
+import { SearchUserService } from './services/search.players';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAYYybmyfTenT6qAr6yHRf2NHKXsmUtIa8",
@@ -41,7 +42,8 @@ export const firebaseConfig = {
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    SearchUserService
     ],
   bootstrap: [AppComponent]
 })
