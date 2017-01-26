@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SearchUserService } from '../services/search.players';
 
 
 @Component({
@@ -11,7 +10,7 @@ export class HomeComponent{
 
 
 
-  constructor(private search: SearchUserService){}
+  constructor(){}
   
   
 

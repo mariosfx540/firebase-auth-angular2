@@ -18,9 +18,10 @@
         <li><a routerLink="/home">Home</a></li>
         <li><a routerLink="/login">Sign-in</a></li>
         <li *ngIf="af.isAuth"><a routerLink="/about">Dashboard</a></li>
+        <li><a routerLink="/results">Results</a></li>
         <li *ngIf="af.isAuth"><a routerLink="/login" (click)="af.logout()">Logout</a></li>
         <img *ngIf="photoURL" src="{{ af.photoURL }}" alt="">
-        <li *ngIf="af.isAuth">{{ af.displayName }}</li>
+        
 
       </ul>
 

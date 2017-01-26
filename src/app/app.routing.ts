@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { PublicComponent } from './home/public.component';
+import { ResultsComponent } from './results/results.component';
+
 
 import { AuthGuard } from './services/auth.guard';
 
@@ -25,6 +27,10 @@ const appRoutes: Routes = [
     {
         path: 'home',
         component: HomeComponent
+    },
+    {
+        path: 'results',
+        component: ResultsComponent
     }
 ];
 
