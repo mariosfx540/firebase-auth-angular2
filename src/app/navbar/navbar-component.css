@@ -9,3 +9,71 @@ form{
     height: 50px;
     padding:5px 5px 0;
 }
+
+.players {
+    margin: 25px auto 0 auto;
+    max-width: 350px;
+}
+
+.players-list {
+    padding: 10px 10px 0 10px;
+    display: table-cell;
+    margin-bottom: 15px;
+    text-align: left;
+    position: absolute;
+}
+
+.players-list tr {
+    border-bottom: 1px solid darkgray;
+    cursor: pointer;
+}
+
+players-list td {
+    padding-bottom: 5px;
+}
+
+.collapsible-indicator {
+    font-size: 30px;
+    line-height:30px;
+}
+
+.collapsible-section {
+    padding: 0 20px 20px 20px;
+}
+
+.collapsed .collapsible-section {
+    display: none;
+}
+
+.results {
+    padding: 20px;
+}
+
+.player-button {
+    background: #1976d2;
+    color: white;
+    font-weight: bold;
+}
+
+.player-button[disabled] {
+    background: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.main-container .list {
+    display: inline-block;
+    max-width: 270px;
+    vertical-align: top;
+    margin-right: 50px;
+}
+
+.search-bar {
+    margin-bottom: 30px;
+    width: 250px;
+}
+
+
+
+
+
