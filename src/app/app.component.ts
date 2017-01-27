@@ -19,12 +19,4 @@ export class AppComponent{
   private router: Router){
   }
 
-
-  ngOnInit() {
-    this.users = this.af.database.list('/users')
-      .map(users => {
-        console.log("BEFORE MAP", users);
-        return users;
-    });
-  }
 }

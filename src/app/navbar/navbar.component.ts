@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { SearchUserService } from '../services/search.players';
 
 
 @Component({
@@ -16,8 +15,7 @@ export class NavbarComponent{
   
   constructor(
     private af: AuthService,
-    private router: Router,
-    private search: SearchUserService){}
+    private router: Router){}
 
 
 }
